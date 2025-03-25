@@ -27,7 +27,7 @@ class GoogleLoginController extends Controller
 
             Auth::login($user);
 
-            return redirect()->intended('dashboard');
+            return redirect()->intended('members');
             
         } catch (Exception $e) {
             Log::error($e);
