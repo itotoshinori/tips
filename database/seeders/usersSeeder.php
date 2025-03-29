@@ -53,7 +53,7 @@ class usersSeeder extends Seeder
                 'email'     => 'test5@test.com',
                 'password'  => bcrypt('password'),
                 'permision'=> 2,
-                'photo_url'=> 'https://sibu.info-proffer.com/storage/images/Ol5jftmReU9jrLZOc3Iy8kUeKAR3G2ZGznP2v8Nq.jpg',
+                'photo_url'=> 'https://sibu.info-proffer.com/storage/images/wufRB9DrkONY6JX4Wsng8cfGgzqxxHPZ2Vp449ab.jpg',
             ],
         ]);
     }

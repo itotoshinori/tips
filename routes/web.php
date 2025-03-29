@@ -3,6 +3,8 @@
 use App\Http\Controllers\GoogleLoginController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StarController;
+use App\Models\Star;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('members',  MemberController::class);
+    Route::resource('stars',  StarController::class)->only('store');
 });
 
 Route::get('/auth/google', [GoogleLoginController::class, 'redirectToGoogle'])
