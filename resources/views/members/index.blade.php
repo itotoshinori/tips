@@ -12,7 +12,7 @@
    </div>
    @if(session('info'))
    <div class="text-center my-4">
-      <div class="text-3xl">
+      <div class="text-4xl">
          {{ session('info') }}
       </div>
    </div>
