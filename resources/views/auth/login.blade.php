@@ -1,6 +1,3 @@
-<head>
-   @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
 <div class="box4">
 <p>グーグルアカウントでログインできます</p>
     <a href="{{ route('login.google') }}">
