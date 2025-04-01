@@ -2,7 +2,7 @@
    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <div class="box4">
-<div class="text-xl">グーグルアカウントでログインできます</div>
+<p>グーグルアカウントでログインできます</p>
     <a href="{{ route('login.google') }}">
         <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
     </a>
@@ -19,5 +19,6 @@
 .box4 p {
     margin: 0; 
     padding: 0;
+    font-size: 30px;
 }
 </stle>
