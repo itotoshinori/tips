@@ -12,8 +12,22 @@
    </div>
    @if(session('info'))
    <div class="text-center my-4">
-      <div class="text-4xl">
-         {{ session('info') }}
+      <div>
+         <div class="result-dis">{{session('info')}}</div>
+         <div class="result-dis">ご協力ありがとうございました</div>
+
+         <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="button"
+               onclick="location.reload();"
+               class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
+               Reset
+            </button>
+            <button type="submit"
+               class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+               {{ __('LogOut') }}
+            </button>
+         </form>
       </div>
    </div>
    @else
@@ -78,6 +92,10 @@
       });
    </script>
    <style>
+      .result-dis {
+         font-size: 30px;
+      }
+
       .point {
          font-size: 24px;
          cursor: pointer;

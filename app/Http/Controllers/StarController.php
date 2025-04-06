@@ -34,7 +34,7 @@ class StarController extends Controller
             }
         }
         if ($implementation == true) {
-            return back()->with('info', '登録されました。ご協力ありがとうございました。');
+            return back()->with('info', '登録されました');
         } else {
             return back()->with('error', '最低一名星をつけて下さい');
         }
