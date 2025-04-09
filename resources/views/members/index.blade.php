@@ -3,24 +3,22 @@
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <div>
-   <div class="text-center my-4">
+   <div class="text-center my-4 text-4xl">
       @if(session('error'))
-      <div class="alert alert-danger">
+      <div class="text-red-600">
          {{ session('error') }}
       </div>
       @endif
    </div>
    @if(session('info'))
-   <div class="text-center my-4">
-      <div>
-         <div class="result-dis">{{session('info')}}</div>
-         <div class="result-dis">ご協力ありがとうございました</div>
+   <div class="text-center my-4 text-4xl">
+         <div class="mt-10 mb-10">{{session('info')}}</div>
+         <div class="mb-10">ご協力ありがとうございました</div>
          <button type="button"
             onclick="location.reload();"
             class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
             Reset
          </button>
-      </div>
    </div>
    @else
    <form method="POST" action="{{ route('stars.store') }}">
@@ -38,7 +36,7 @@
             Reset
          </button>
       </div>
-      <div class="flex flex-wrap gap-4 justify-center w-[95%]">
+      <div class="flex flex-wrap gap-4 justify-center w-[95%] mx-auto">
          @foreach ($members as $member)
          <div class="p-4 border-4 border-black w-100 bg-white shadow-lg rounded-lg" id={{$member->id}}>
             <p class="text-blue-600 dark:text-sky-400 font-bold text-center text-4xl">
