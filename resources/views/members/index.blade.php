@@ -41,12 +41,14 @@
       <div class="flex flex-wrap gap-4 justify-center">
          @foreach ($members as $member)
          <div class="p-4 border-4 border-black w-100 bg-white shadow-lg rounded-lg" id={{$member->id}}>
-            <p class="text-blue-600 dark:text-sky-400 font-bold text-center text-4xl mb-2">
+            <p class="text-blue-600 dark:text-sky-400 font-bold text-center text-4xl">
                {{ $member->name }}
             </p>
+            <br />
             <div class="points text-xl" data-member-id="{{$member->id}}">
                ★ ★ ★ ★ ★
             </div>
+            <br />
             <div class="flex justify-center mt-3">
                <img src="{{ $member->photo_url }}" class="w-72 h-auto rounded-md shadow-md" alt="サンプル画像">
             </div>
