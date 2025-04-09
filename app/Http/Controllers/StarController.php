@@ -15,14 +15,14 @@ class StarController extends Controller
     public function store(Request $request)
     {
         $points = $request->input('point'); // 配列を取得
-        $user = Auth::user();
+        //$user = Auth::user();
         //ループ処理
         $implementation = false;
         foreach ($points as $key => $value) {
             $star = new Star();
             if ($value >= 1) {
                 $star->user_id = $key;
-                $star->registration_user_id = $user->id;
+                //$star->registration_user_id = $user->id;
                 $star->point = $value;
                 try {
                     // データベースに保存

@@ -23,10 +23,6 @@
                class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
                Reset
             </button>
-            <button type="submit"
-               class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-               {{ __('LogOut') }}
-            </button>
          </form>
       </div>
    </div>
@@ -48,11 +44,11 @@
       </div>
       <div class="flex flex-wrap gap-4 justify-center">
          @foreach ($members as $member)
-         <div class="p-4 border-4 border-black w-80 bg-white shadow-lg rounded-lg" id={{$member->id}}>
-            <p class="text-blue-600 dark:text-sky-400 font-bold text-center">
+         <div class="p-4 border-4 border-black w-130 bg-white shadow-lg rounded-lg" id={{$member->id}}>
+            <p class="text-blue-600 dark:text-sky-400 font-bold text-center text-4xl">
                {{ $member->name }}
             </p>
-            <div class="points text-xl" data-member-id="{{$member->id}}">
+            <div class="points" data-member-id="{{$member->id}}">
                ★ ★ ★ ★ ★
             </div>
             <div class="flex justify-center">
@@ -97,7 +93,7 @@
       }
 
       .point {
-         font-size: 24px;
+         font-size: 40px;
          cursor: pointer;
          color: #d8d8d8;
       }

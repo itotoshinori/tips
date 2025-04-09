@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('stars', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
-            $table->integer('registration_user_id');
+            $table->integer('registration_user_id')->nullable();
             $table->integer('point');
 			$table->timestamps();
         });
