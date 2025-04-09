@@ -29,7 +29,7 @@ class usersSeeder extends Seeder
                 'email'     => 'test2@test.com',
                 'password'  => bcrypt('password'),
                 'permision'=> 2,
-                'photo_url'=> 'https://sibu.info-proffer.com/storage/images/Tbazf6CsykWxKyERqeQqVS9oszNtO2Gas4lgkWpp.jpg',
+                'photo_url'=> 'https://sibu.info-proffer.com/storage/images/KdzcT7BSW8BwZHLvhXNCEIqAvgtisk24ppK18Ac5.png',
             ],
             [
                 'name' => '山田智',
@@ -37,7 +37,7 @@ class usersSeeder extends Seeder
                 'email'     => 'test3@test.com',
                 'password'  => bcrypt('password'),
                 'permision'=> 2,
-                'photo_url'=> 'https://sibu.info-proffer.com/storage/images/FZB6ffa6kXais7K5znlEe66CTOdkaXXYIjyNAz3l.jpg',
+                'photo_url'=> 'https://sibu.info-proffer.com/storage/images/zLdpijzmsvTnHqc6diorFbN5b9LZVI7z0FIoLhix.png',
             ],
             [
                 'name' => '高谷沙也加',
@@ -45,7 +45,7 @@ class usersSeeder extends Seeder
                 'email'     => 'test4@test.com',
                 'password'  => bcrypt('password'),
                 'permision'=> 2,
-                'photo_url'=> 'https://sibu.info-proffer.com/storage/images/Ac5TGpjZVDafJxwQTsgXoycxDTmqykg4a3BJDgYC.jpg',
+                'photo_url'=> 'https://sibu.info-proffer.com/storage/images/kJErRdcnfeFTzoxYaQeNjQpRqD6Z410OjRQfz9wS.png',
             ],
             [
                 'name' => '諸積登子',
@@ -53,7 +53,7 @@ class usersSeeder extends Seeder
                 'email'     => 'test5@test.com',
                 'password'  => bcrypt('password'),
                 'permision'=> 2,
-                'photo_url'=> 'https://sibu.info-proffer.com/storage/images/wufRB9DrkONY6JX4Wsng8cfGgzqxxHPZ2Vp449ab.jpg',
+                'photo_url'=> 'https://sibu.info-proffer.com/storage/images/JYWXGM5rSU1l4F2Wd0IdxNsARuGvoiJoS73ZtoJB.png',
             ],
         ]);
     }
