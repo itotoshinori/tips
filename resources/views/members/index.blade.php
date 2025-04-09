@@ -20,14 +20,6 @@
             class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
             Reset
          </button>
-         <form method="POST" action="{{ route('logout') }}">
-            @csrf
-            <button type="submit"
-            class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
-            >
-               {{ __('Log Out') }}
-            </button>
-         </form>
       </div>
    </div>
    @else
@@ -48,14 +40,14 @@
       </div>
       <div class="flex flex-wrap gap-4 justify-center">
          @foreach ($members as $member)
-         <div class="p-4 border-4 border-black w-80 bg-white shadow-lg rounded-lg" id={{$member->id}}>
-            <p class="text-blue-600 dark:text-sky-400 font-bold text-center text-4xl">
+         <div class="p-4 border-4 border-black w-100 bg-white shadow-lg rounded-lg" id={{$member->id}}>
+            <p class="text-blue-600 dark:text-sky-400 font-bold text-center text-4xl mb-2">
                {{ $member->name }}
             </p>
             <div class="points text-xl" data-member-id="{{$member->id}}">
                ★ ★ ★ ★ ★
             </div>
-            <div class="flex justify-center">
+            <div class="flex justify-center mt-3">
                <img src="{{ $member->photo_url }}" class="w-72 h-auto rounded-md shadow-md" alt="サンプル画像">
             </div>
             <input type="hidden" name="point[{{$member->id}}]" id="point-{{$member->id}}" value="0" />
@@ -97,8 +89,8 @@
       }
 
       .point {
-         margin-left:15px;
-         font-size: 30px;
+         margin-left:20px;
+         font-size: 40px;
          cursor: pointer;
          color: #d8d8d8;
       }
