@@ -25,10 +25,10 @@
    @else
    <form method="POST" action="{{ route('stars.store') }}">
       @csrf
-      <div class="text-center my-4">
-         <div class="text-xl">担当した店員の評価(星印)をして</div>
-         <div class="text-xl">送信ボタンをクリックして下さい</div>
-         <div class="text-xl">最低１名評価して下さい</div>
+      <div class="text-center my-4 text-4xl">
+         <div class="mb-6">担当した店員の評価(星印)をして</div>
+         <div class="mb-6">送信ボタンをクリックして下さい</div>
+         <div class="mb-6">最低１名評価して下さい</div>
          <button type="submit" class="mr-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
             送　信
          </button>
@@ -44,11 +44,9 @@
             <p class="text-blue-600 dark:text-sky-400 font-bold text-center text-4xl">
                {{ $member->name }}
             </p>
-            <br />
-            <div class="points text-xl" data-member-id="{{$member->id}}">
+            <div class="points text-xl mt-4 mb-4" data-member-id="{{$member->id}}">
                ★ ★ ★ ★ ★
             </div>
-            <br />
             <div class="flex justify-center mt-3">
                <img src="{{ $member->photo_url }}" class="w-72 h-auto rounded-md shadow-md" alt="サンプル画像">
             </div>
@@ -91,7 +89,7 @@
       }
 
       .point {
-         margin-left:20px;
+         margin-right:20px;
          font-size: 40px;
          cursor: pointer;
          color: #d8d8d8;
