@@ -48,7 +48,7 @@
                ★ ★ ★ ★ ★
             </div>
             <div class="flex justify-center mt-3">
-               <img src="{{ $member->photo_url }}" class="rounded-md shadow-md" style="width:300px; height:auto;" alt="サンプル画像">
+               <img src="{{ $member->photo_url }}" class="rounded-md shadow-md" style="width:400px; height:auto;" alt="サンプル画像">
             </div>
             <input type="hidden" name="point[{{$member->id}}]" id="point-{{$member->id}}" value="0" />
          </div>
