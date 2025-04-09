@@ -15,15 +15,11 @@
       <div>
          <div class="result-dis">{{session('info')}}</div>
          <div class="result-dis">ご協力ありがとうございました</div>
-
-         <form method="POST" action="{{ route('logout') }}">
-            @csrf
-            <button type="button"
-               onclick="location.reload();"
-               class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
-               Reset
-            </button>
-         </form>
+         <button type="button"
+            onclick="location.reload();"
+            class="w-64 mb-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
+            Reset
+         </button>
       </div>
    </div>
    @else
@@ -42,13 +38,13 @@
             Reset
          </button>
       </div>
-      <div class="gap-8 justify-center">
+      <div class="flex flex-wrap gap-4 justify-center">
          @foreach ($members as $member)
-         <div class="p-2 m-4 border-4 border-black w-15 bg-white shadow-lg rounded-lg" id={{$member->id}}>
+         <div class="p-4 border-4 border-black w-80 bg-white shadow-lg rounded-lg" id={{$member->id}}>
             <p class="text-blue-600 dark:text-sky-400 font-bold text-center text-4xl">
                {{ $member->name }}
             </p>
-            <div class="points text-center" data-member-id="{{$member->id}}">
+            <div class="points text-xl" data-member-id="{{$member->id}}">
                ★ ★ ★ ★ ★
             </div>
             <div class="flex justify-center">
@@ -69,7 +65,7 @@
             let memberId = $(this).data('member-id');
             let points = $(this).text().trim().split(' ').map((s, index) =>
                `<span class="point" data-score="${index + 1}">★</span>`
-            ).join('  ');
+            ).join('');
             $(this).html(points);
          });
 
@@ -94,7 +90,7 @@
 
       .point {
          margin-left:10px;
-         font-size: 40px;
+         font-size: 24px;
          cursor: pointer;
          color: #d8d8d8;
       }
