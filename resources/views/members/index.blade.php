@@ -69,7 +69,7 @@
             let memberId = $(this).data('member-id');
             let points = $(this).text().trim().split(' ').map((s, index) =>
                `<span class="point" data-score="${index + 1}">★</span>`
-            ).join('');
+            ).join('  ');
             $(this).html(points);
          });
 
