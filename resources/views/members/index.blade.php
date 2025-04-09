@@ -17,9 +17,17 @@
          <div class="result-dis">ご協力ありがとうございました</div>
          <button type="button"
             onclick="location.reload();"
-            class="w-64 mb-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
+            class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
             Reset
          </button>
+         <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit"
+            class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+            >
+               {{ __('Log Out') }}
+            </button>
+         </form>
       </div>
    </div>
    @else
@@ -89,8 +97,8 @@
       }
 
       .point {
-         margin-left:10px;
-         font-size: 24px;
+         margin-left:15px;
+         font-size: 30px;
          cursor: pointer;
          color: #d8d8d8;
       }
