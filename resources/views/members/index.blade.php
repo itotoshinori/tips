@@ -93,6 +93,7 @@
       }
 
       .point {
+         margin-left:10px;
          font-size: 40px;
          cursor: pointer;
          color: #d8d8d8;
