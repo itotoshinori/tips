@@ -42,13 +42,13 @@
             Reset
          </button>
       </div>
-      <div class="flex flex-wrap gap-4 justify-center">
+      <div class="gap-8 justify-center">
          @foreach ($members as $member)
-         <div class="p-4 border-4 border-black w-130 bg-white shadow-lg rounded-lg" id={{$member->id}}>
+         <div class="p-2 m-4 border-4 border-black w-15 bg-white shadow-lg rounded-lg" id={{$member->id}}>
             <p class="text-blue-600 dark:text-sky-400 font-bold text-center text-4xl">
                {{ $member->name }}
             </p>
-            <div class="points" data-member-id="{{$member->id}}">
+            <div class="points text-center" data-member-id="{{$member->id}}">
                ★ ★ ★ ★ ★
             </div>
             <div class="flex justify-center">
