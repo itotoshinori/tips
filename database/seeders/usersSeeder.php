@@ -19,7 +19,7 @@ class usersSeeder extends Seeder
                 'name' => '佐藤剛',
                 'kana' =>'サトウツヨシ',
                 'email'     => 'test@test.com',
-                'password'  => bcrypt('password'),
+                'password'  => bcrypt('star2323'),
                 'permision'=> 1,
                 'photo_url'=> 'https://sibu.info-proffer.com/storage/images/yW1YTpnivFdQ5kmAua3CY0izLCSiDLlOWGUGWO8H.jpg',
             ],
