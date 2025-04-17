@@ -5,7 +5,7 @@
 <div class="container">
     <form method="POST" action="{{ route('logout') }}">
         @csrf
-        <span style="margin-right:10px; font-size: 20px;">■個人別集計表(過去30日前から集計)</span>
+        <span style="margin-right:10px; font-size: 20px;">■個人別集計表(過去30日前)</span>
         <a href="/members" style="margin-right:10px; font-size: 20px;">
             登録画面
         </a>
@@ -18,7 +18,7 @@
     <hr />
     <span class="ranking_span">順位</span>
     <span class="name_span">名前</span>
-    <span class="content_span">トータル点数
+    <span class="content_span">点数合計
     </span>
     <span class="content_span">平均点数</span>
     <span class="content_span">件数</span>
@@ -38,7 +38,7 @@
         width: 100%;
         margin: 0 auto;
         align-items: center;
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .ranking_span {
@@ -49,7 +49,7 @@
 
     .name_span {
         display: inline-block;
-        width: 100px;
+        width: 150px;
     }
 
     .content_span {
