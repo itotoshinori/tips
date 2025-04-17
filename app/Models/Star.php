@@ -13,4 +13,8 @@ class Star extends Model
         'registration_user_id',
         'point',
     ];
+
+    public function user() {
+        return $this->belongsTo('App\Models\User');
+    }
 }

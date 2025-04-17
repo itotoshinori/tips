@@ -11,22 +11,26 @@
       </div>
       @endif
    </div>
+   <div class="text-center my-4 text-4xl">■店員星システム</div>
+   @if($isLoggedIn)
+      <div class="text-center text-blue-600 text-4xl"><a href="/stars">集計表へ</a></div>
+   @endif
    @if(session('info'))
-   <div class="text-center my-4 text-4xl">
-         <div class="mt-10 mb-10">{{session('info')}}</div>
-         <div class="mb-10">ご協力ありがとうございました</div>
-         <button type="button"
-            onclick="location.reload();"
-            class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
-            Reset
-         </button>
+   <div class="text-center text-xl">
+      <div class="mt-10 mb-4">{{session('info')}}</div>
+      <div class="mb-4">ご協力ありがとうございました</div>
+      <button type="button"
+         onclick="location.reload();"
+         class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
+         Reset
+      </button>
    </div>
    @else
    <form method="POST" action="{{ route('stars.store') }}">
       @csrf
-      <div class="text-center my-4 text-4xl">
-         <div class="mb-6">担当した店員の評価(星印)をして</div>
-         <div class="mb-6">送信ボタンをクリックして下さい</div>
+      <div class="text-center my-4 text-xl">
+         <div class="mb-3">担当した店員の評価(星印)をして</div>
+         <div class="mb-3">送信ボタンをクリックして下さい</div>
          <div class="mb-6">最低１名評価して下さい</div>
          <button type="submit" class="mr-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
             送　信
@@ -88,7 +92,7 @@
       }
 
       .point {
-         margin-right:20px;
+         margin-right: 20px;
          font-size: 40px;
          cursor: pointer;
          color: #d8d8d8;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
 class MemberController extends Controller
@@ -14,7 +15,8 @@ class MemberController extends Controller
     public function index()
     {
         $members = User::where('permision',2)->get(); 
-        return view('members/index', compact('members'));
+        $isLoggedIn = Auth::check(); // ログインしていればtrue、してなければfalse
+        return view('members/index', compact('members','isLoggedIn'));
     }
 
     /**
