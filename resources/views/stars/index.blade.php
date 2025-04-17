@@ -38,7 +38,7 @@
         width: 100%;
         margin: 0 auto;
         align-items: center;
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .ranking_span {
