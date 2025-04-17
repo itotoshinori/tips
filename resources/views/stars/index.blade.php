@@ -43,18 +43,18 @@
 
     .ranking_span {
         display: inline-block;
-        width: 20px;
+        width: 40px;
         text-align: center;
     }
 
     .name_span {
         display: inline-block;
-        width: 150px;
+        width: 180px;
     }
 
     .content_span {
         display: inline-block;
-        width: 100px;
+        width: 200px;
         text-align: end;
     }
 </style>
