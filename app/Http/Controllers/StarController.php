@@ -19,7 +19,7 @@ class StarController extends Controller
         $date = Carbon::now()->subDays(30)->startOfDay(); // 30日前の00:00
         $results = Star::select('user_id', DB::raw('COUNT(*) as count'), DB::raw('SUM(point) as total_point'),
         DB::raw('COUNT(*) as count'), DB::raw('(SUM(point)/COUNT(*)) as averave'))->groupBy('user_id')
-        ->where('created_at','>=' ,$date)
+        ->where('created_at','>=' ,$date)   
         ->orderByDesc('total_point')
         ->orderByDesc('averave')
         ->get(); 

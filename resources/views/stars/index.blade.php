@@ -1,4 +1,5 @@
 <head>
+<title>店員評価システム 個人別集計</title>
     <meta http-equiv="content-language" content="ja">
 </head>
 <div class="container">
