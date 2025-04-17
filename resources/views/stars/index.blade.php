@@ -5,7 +5,7 @@
 <div class="container">
     <form method="POST" action="{{ route('logout') }}">
         @csrf
-        <span style="margin-right:10px; font-size: 30px;">■個人別集計表(過去30日前)</span>
+        <span style="margin-right:10px; font-size: 30px;">■個人別集計表(過去30日前から)</span>
         <a href="/members" style="margin-right:10px; font-size: 20px;">
             登録画面
         </a>
